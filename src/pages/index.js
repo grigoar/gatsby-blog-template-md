@@ -1,10 +1,13 @@
 import React from "react"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
     <div>
-      <h1>My first Gatsby blog</h1>
-      <p>HEll</p>
+      <Layout>
+        <h1>My first Gatsby blog</h1>
+        <p>HEll</p>
+      </Layout>
     </div>
   )
 }

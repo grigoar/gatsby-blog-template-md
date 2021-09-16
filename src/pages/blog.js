@@ -1,8 +1,15 @@
 import React from "react"
 
-const BlogPage = ()=>{
-    return <div>The Blog page</div>
+import Layout from "../components/layout"
 
+const BlogPage = () => {
+  return (
+    <div>
+      <Layout>
+        <div>This is a list of blogs</div>
+      </Layout>
+    </div>
+  )
 }
 
 export default BlogPage
