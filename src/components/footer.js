@@ -1,7 +1,11 @@
 import React from "react"
 
+import * as footerStyle from "./footer.module.scss"
+
 const Footer = () => {
-  return <footer>Created by grigoar, ©2021</footer>
+  return (
+    <footer className={footerStyle.footer}>Created by grigoar, ©2021</footer>
+  )
 }
 
 export default Footer

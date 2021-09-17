@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+
+import * as headerStyle from "./header.module.scss"
 import { Link } from "gatsby"
 
 const Header = () => {
@@ -19,30 +21,34 @@ const Header = () => {
 
   return (
     <header>
-      <h1>Scoala de soferi Nath Grigore</h1>
+      <h1 className={headerStyle.headerTitle}>grigoar template</h1>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <button onClick={themeLight}>Light</button>
-          </li>
-          <li>
-            <button onClick={themeDark}>Dark</button>
-          </li>
-          <li>
-            <button onClick={themeOrient}>Orient</button>
-          </li>
+        <ul className={headerStyle.navContainer}>
+          <div className={headerStyle.containerMain}>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </div>
+          <div className={headerStyle.containerThemes}>
+            <li>
+              <button onClick={themeLight}>Light</button>
+            </li>
+            <li>
+              <button onClick={themeDark}>Dark</button>
+            </li>
+            <li>
+              <button onClick={themeOrient}>Orient</button>
+            </li>
+          </div>
         </ul>
       </nav>
     </header>

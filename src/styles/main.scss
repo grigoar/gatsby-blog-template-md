@@ -1,4 +1,4 @@
-@import "default";
+@import "reset";
 // @import "partial/variables";
 @import "partial/themes";
 //=====================================
@@ -100,11 +100,12 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  background-image: linear-gradient(
-    to right bottom,
-    var(--color-grey-dark-1),
-    var(--color-grey-dark-2)
-  );
+  // background-image: linear-gradient(
+  //   to right bottom,
+  //   var(--color-grey-dark-1),
+  //   var(--color-grey-dark-2)
+  // );
+  background-color: var(--body-background-color);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -114,6 +115,7 @@ body {
 body.light {
   --text-color: #222;
   --body-background-color: #fff;
+  --background-color-second: #d3d3d3;
   --theme-color: #170a48;
   --secondary-color: #f27731;
   --ternary-color: #ccf962;
@@ -125,6 +127,7 @@ body.light {
 body.dark {
   --text-color: #fff;
   --body-background-color: #22222a;
+  --background-color-second: #d3d3d3;
   --theme-color: #42424a;
   --secondary-color: #c24721;
   --ternary-color: #698932;
@@ -136,6 +139,7 @@ body.dark {
 body.orient {
   --text-color: #000;
   --body-background-color: rgb(0, 217, 255);
+  --background-color-second: #d3d3d3;
   --theme-color: #372a27;
   --secondary-color: #d26741;
   --ternary-color: #b9da63;
@@ -147,5 +151,22 @@ body.orient {
 
 a {
   // color: var(--color-grey-light-1);
-  color: var(--theme-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--background-color-second);
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }

@@ -1,0 +1,40 @@
+.header-title {
+  margin-left: 20px;
+}
+
+.navContainer {
+  display: flex;
+  margin: 0 10px;
+}
+.containerMain {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  li {
+    width: 100%;
+    height: 100%;
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  li:hover {
+    background-color: orange;
+    filter: brightness(0.6);
+  }
+}
+
+.containerThemes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
