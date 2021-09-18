@@ -21,11 +21,22 @@ const BlogPage = () => {
       }
     }
   `)
-  console.log(data)
+  // console.log(data)
   return (
     <div>
       <Layout>
-        <div>This is a list of blogs</div>
+        <div>
+          {data.allMarkdownRemark.edges.map(edge => {
+            return (
+              <div key={edge.node.fields.slug}>
+                <Link to={`/blog/${edge.node.fields.slug}`}>
+                  <h1>{edge.node.frontmatter.title}</h1>
+                  <p>{edge.node.frontmatter.date}</p>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
       </Layout>
     </div>
   )
