@@ -1,71 +1,67 @@
-/*
-*=========     Theme       ===========
-*/
-//Allowed values: Dark, Light, Default
-// $theme: Default;
-// $theme: Dark;
-// $theme: Light;
-$theme: Orient;
+//=====================================
+//---------- COMMONS MAIN -------------
+//=====================================
+// COLOR VARIABLES
+// $color-primary: #c69963;
+// $color-primary-dark: #b28451;
 
-//Allowed values: blue-beans, rogers-rovers, pastry-pizza
-// $brand: blue-beans;
-$brand: rogers-rovers;
-/*
-*=========     COLORS       ===========
-*/
-//The defaults need to be used on top, not on a else branch
-$text-color: #222;
-$body-background-color: #fff;
-$theme-color: #170a48;
-$secondary-color: #f27731;
-$ternary-color: #ccf962;
-$link-color: $secondary-color;
-$menu-item-color: white;
-$items-background-color-hover: rgb(255, 209, 172);
-$button-background-color: rgb(255, 209, 172);
+// $color-secondary: #101d2c;
 
-@if $theme==Dark {
-  $text-color: #fff;
-  $body-background-color: #22222a;
-  $theme-color: #42424a;
-  $secondary-color: #c24721;
-  $ternary-color: #698932;
-  $link-color: $secondary-color;
-  $menu-item-color: white;
-  $items-background-color-hover: rgb(138, 62, 0);
-  $button-background-color: rgb(138, 62, 0);
-} @else if $theme==Light {
-  $text-color: #000;
-  $body-background-color: #fff;
-  $theme-color: #372a27;
-  $secondary-color: #d26741;
-  $ternary-color: #b9da63;
-  $link-color: $secondary-color;
-  $menu-item-color: white;
-  $items-background-color-hover: rgb(255, 209, 172);
-  $button-background-color: rgb(255, 209, 172);
-} @else if $theme==Orient {
-  $text-color: #000;
-  $body-background-color: rgb(0, 217, 255);
-  $theme-color: #372a27;
-  $secondary-color: #d26741;
-  $ternary-color: #b9da63;
-  $link-color: $secondary-color;
-  $menu-item-color: white;
-  $items-background-color-hover: rgb(255, 209, 172);
-  $button-background-color: rgb(255, 209, 172);
+// $color-grey-light-1: #f9f7f6;
+// $color-grey-light-2: #aaa;
+
+// $color-grey-dark-1: #54483a;
+// $color-grey-dark-2: #beaf9e;
+// $color-grey-dark-3: #333;
+
+//#e67e22;
+//#c55f06;
+:root {
+  --color-primary: #4c40d1;
+  --color-primary-light: #706ab1;
+  --color-primary-dark: #352c92;
+
+  --color-secondary: #ff4500;
+  --color-secondary-light: #ffa27f;
+  --color-secondary-dark: #661b00;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-green: #2ab600;
+  --color-red-light: #ff7474;
+  --color-red-dark: #ff1919;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
+
+  //For themes
+  --text-color: #222;
+  --body-background-color: #fff;
+  --theme-color: #170a48;
+  --secondary-color: #f27731;
+  --ternary-color: #ccf962;
+  --link-color: $secondary-color;
+  --menu-item-color: white;
+  --items-background-color-hover: rgb(255, 209, 172);
+  --button-background-color: rgb(255, 209, 172);
 }
 
-/*
-*=========       FONTS      ===========
-*/
-$text-font: "Alegrya Sans", Verdana, Arial, sans-serif;
-$headline-font: "Titillium Web", "Palatino Linotype", Georgia, serif;
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
 
-/*
-*=========    SIZES     ===========
-*/
-$content-width: 960px;
-$header-height: 60px;
-$footer-height: 90px;
-// $col: col-width($columns:8);
+// RESPONSIVE BREAKPOINTS
+
+$bp-largest: 75em; //1200px/16
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px

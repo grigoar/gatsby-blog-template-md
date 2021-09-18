@@ -1,0 +1,50 @@
+/*------------------------------*/
+
+/*BUTTONS*/
+
+/*------------------------------*/
+
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  margin-top: 15px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  margin-left: 15px;
+  color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:active,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #c55f06;
+}
+
+.btn-full:active,
+.btn-full:hover {
+  border: 1px solid #c55f06;
+}
+
+.btn-ghost:active,
+.btn-ghost:hover {
+  border: 1px solid #c55f06;
+  color: #fff;
+}

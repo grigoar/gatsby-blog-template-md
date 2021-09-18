@@ -1,0 +1,71 @@
+/*
+*=========     Theme       ===========
+*/
+//Allowed values: Dark, Light, Default
+// $theme: Default;
+// $theme: Dark;
+// $theme: Light;
+$theme: Orient;
+
+//Allowed values: blue-beans, rogers-rovers, pastry-pizza
+// $brand: blue-beans;
+$brand: rogers-rovers;
+/*
+*=========     COLORS       ===========
+*/
+//The defaults need to be used on top, not on a else branch
+$text-color: #222;
+$body-background-color: #fff;
+$theme-color: #170a48;
+$secondary-color: #f27731;
+$ternary-color: #ccf962;
+$link-color: $secondary-color;
+$menu-item-color: white;
+$items-background-color-hover: rgb(255, 209, 172);
+$button-background-color: rgb(255, 209, 172);
+
+@if $theme==Dark {
+  $text-color: #fff;
+  $body-background-color: #22222a;
+  $theme-color: #42424a;
+  $secondary-color: #c24721;
+  $ternary-color: #698932;
+  $link-color: $secondary-color;
+  $menu-item-color: white;
+  $items-background-color-hover: rgb(138, 62, 0);
+  $button-background-color: rgb(138, 62, 0);
+} @else if $theme==Light {
+  $text-color: #000;
+  $body-background-color: #fff;
+  $theme-color: #372a27;
+  $secondary-color: #d26741;
+  $ternary-color: #b9da63;
+  $link-color: $secondary-color;
+  $menu-item-color: white;
+  $items-background-color-hover: rgb(255, 209, 172);
+  $button-background-color: rgb(255, 209, 172);
+} @else if $theme==Orient {
+  $text-color: #000;
+  $body-background-color: rgb(0, 217, 255);
+  $theme-color: #372a27;
+  $secondary-color: #d26741;
+  $ternary-color: #b9da63;
+  $link-color: $secondary-color;
+  $menu-item-color: white;
+  $items-background-color-hover: rgb(255, 209, 172);
+  $button-background-color: rgb(255, 209, 172);
+}
+
+/*
+*=========       FONTS      ===========
+*/
+$text-font: "Alegrya Sans", Verdana, Arial, sans-serif;
+$headline-font: "Titillium Web", "Palatino Linotype", Georgia, serif;
+
+/*
+*=========    SIZES     ===========
+*/
+$content-width: 960px;
+$header-height: 60px;
+$footer-height: 90px;
+// $col: col-width($columns:8);

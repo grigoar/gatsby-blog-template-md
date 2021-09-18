@@ -21,21 +21,29 @@ const Header = () => {
 
   return (
     <header>
-      <h1 className={headerStyle.headerTitle}>grigoar template</h1>
+      <h1 className={headerStyle.headerTitle}>grigoar`s blog template</h1>
       <nav>
         <ul className={headerStyle.navContainer}>
           <div className={headerStyle.containerMain}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" activeClassName={headerStyle.activeNavItem}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog" activeClassName={headerStyle.activeNavItem}>
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" activeClassName={headerStyle.activeNavItem}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" activeClassName={headerStyle.activeNavItem}>
+                Contact
+              </Link>
             </li>
           </div>
           <div className={headerStyle.containerThemes}>
