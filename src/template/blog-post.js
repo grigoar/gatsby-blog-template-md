@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 // export const query = graphql`
 //   query($slug: String!) {
@@ -19,6 +20,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        keywords
       }
       html
     }
@@ -27,9 +29,12 @@ export const query = graphql`
 
 const BlogTemplate = ({ data }) => {
   const post = data.markdownRemark
-  console.log(post)
   return (
     <Layout>
+      <Head
+        title={post.frontmatter.title}
+        keywords={post.frontmatter.keywords}
+      />
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
     </Layout>

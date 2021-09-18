@@ -4,6 +4,7 @@ module.exports = {
     title: "My Gatsby Site"
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sass",
     {
